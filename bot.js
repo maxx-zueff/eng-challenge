@@ -24,12 +24,12 @@ console.log = function(d) {
 let hash_tags = ['#adulted', '#eal', '#ellchat', '#ESL',
 	'#grammar', '#twinglish', '#englishdiary']; 
 
-var stream = T.stream('statuses/filter',
+let stream = T.stream('statuses/filter',
 	{ track: hash_tags });
  
 stream.on('tweet', function (tweet) {
 	T.post('favorites/create', { id: tweet.id_str }, function (err, data, response) {
 		if (err) console.log(err);
-		else console.log('REPOST!');
+		else console.log('LIKE!');
 	});
 });
