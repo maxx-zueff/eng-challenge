@@ -22,7 +22,8 @@ console.log = function(d) {
 // Stream
 
 let hash_tags = ['#adulted', '#eal', '#ellchat', '#ESL',
-	'#grammar', '#twinglish', '#englishdiary']; 
+	'#grammar', '#twinglish', '#englishdiary',
+	'#100DaysOfEnglish']; 
 
 let stream = T.stream('statuses/filter',
 	{ track: hash_tags });
