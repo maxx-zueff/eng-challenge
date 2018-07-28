@@ -6,6 +6,7 @@ const fs = require('fs');
 const util = require('util');
 
 let config = require('./config/config.js');
+let hash_tags = require('./config/tags.js');
 
 // --------------------------------------------------------
 // Debug
@@ -59,11 +60,6 @@ let start = function (reset) {
 };
 
 let bot = function(T) {
-
-
-	let hash_tags = ['#adulted', '#eal', '#ellchat', '#ESL',
-		'#grammar', '#twinglish', '#englishdiary',
-		'#100DaysOfEnglish']; 
 
 	let stream = T.stream('statuses/filter',
 		{ track: hash_tags });
